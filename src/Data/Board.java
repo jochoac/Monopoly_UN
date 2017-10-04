@@ -85,7 +85,7 @@ public class Board {
         luckyCards.add(jail);
         luckyCards.add(bonus100);
         luckyCards.add(penalty150);
-        luckyCards.add(returnDice);
+        
         
         
         //probar push
