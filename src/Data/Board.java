@@ -92,7 +92,7 @@ public class Board {
         
         int value = 0;
         gameBoard = new Square[11][11];
-        for (int row = 0; row < gameBoard.length; row++) {
+        for (int row = 0; row < gameBoard.length; row++)  {
             for (int col = 0; col < gameBoard.length; col++) 
             {
                 if((row==0&&col==5)||(row==5&&col==10)||(row==5&&col==0)||(row==10&&col==5))
