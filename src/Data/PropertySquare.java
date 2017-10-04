@@ -14,7 +14,8 @@ public class PropertySquare extends Square
     private int cost;
     private PropertyCard card;
 
-    public PropertySquare(int  cost, PropertyCard card, int row, int col, String name) {
+    public PropertySquare(int cost, PropertyCard card, int row, int col, String name) 
+    {
         super(row, col, name);
         this.cost = cost;
         this.card = card;
