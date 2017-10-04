@@ -69,7 +69,12 @@ public class Board {
         cards.add(armenia);
         cards.add(chiquinquira);
         cards.add(zipaquira);
+        cards.add(barichara);
+        cards.add(losNevados);
+        cards.add(pasto);
+        cards.add(rioHacha);
         cards.add(sanGil);
+        cards.add(ipiales);
         
         
         int value = 0;
