@@ -121,13 +121,13 @@ public class Board {
                     Square sqr = new Square(row, col, "FREE STOP|");
                     gameBoard[row][col]= sqr;
                 }
-                else if(row==0||row==10)
+                else if(row==0|| row==10)
                 {
                     PropertyCard card = properties.get(value++);
                     PropertySquare square = new PropertySquare(card.getCost(), card, row, col, card.getName());
                     gameBoard[row][col] = square; 
                 }
-                else if(col==0||col==10)
+                else if(col==0|| col==10)
                 {
                     PropertyCard card = properties.get(value++);
                     PropertySquare square = new PropertySquare(card.getCost(), card, row, col, card.getName());
