@@ -1,3 +1,4 @@
  ---- Autores:
 	- Diego Ruiz
 	- Juan Ochoa
+	- Mateo Matijasevick
