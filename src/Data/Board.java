@@ -46,6 +46,11 @@ public class Board {
         PropertyCard rioHacha = new PropertyCard(567,"Rio Hacha");
         PropertyCard ipiales = new PropertyCard(345,"Ipiales");
         
+        LuckyCard jail = new LuckyCard("Exit to Jail", 0, 0, "Exit to Jail");
+        LuckyCard bonus100 = new LuckyCard("Received 100 dollars", 0, 100, "Bonus + $100");
+        LuckyCard penalty150 = new LuckyCard("You lose 150 dollars", 150, 0, "Penalty - $150");
+        LuckyCard returnDice = new LuckyCard("Returns to roll the die", 150, 0, "Roll the die");
+        
         
         propertys.add(bogota);
         propertys.add(cartagena);
@@ -76,6 +81,12 @@ public class Board {
         propertys.add(rioHacha);
         propertys.add(sanGil);
         propertys.add(ipiales);
+        
+        luckyCards.add(jail);
+        luckyCards.add(bonus100);
+        luckyCards.add(penalty150);
+        luckyCards.add(returnDice);
+        
         
         //probar push
         int value = 0;

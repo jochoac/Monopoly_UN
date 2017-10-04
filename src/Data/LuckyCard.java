@@ -11,10 +11,10 @@ package Data;
  */
 public class LuckyCard extends Card{
     private String description;
-    private String penalty;
-    private String bonus;
+    private int penalty;
+    private int bonus;
 
-    public LuckyCard(String description, String penalty, String bonus, String name) {
+    public LuckyCard(String description, int penalty, int bonus, String name) {
         super(name);
         this.description = description;
         this.penalty = penalty;
@@ -29,19 +29,19 @@ public class LuckyCard extends Card{
         this.description = description;
     }
 
-    public String getPenalty() {
+    public int getPenalty() {
         return penalty;
     }
 
-    public void setPenalty(String penalty) {
+    public void setPenalty(int penalty) {
         this.penalty = penalty;
     }
 
-    public String getBonus() {
+    public int getBonus() {
         return bonus;
     }
 
-    public void setBonus(String bonus) {
+    public void setBonus(int bonus) {
         this.bonus = bonus;
     }
 }
