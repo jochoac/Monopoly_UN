@@ -19,6 +19,7 @@ public class PropertySquare extends Square
         this.cost = cost;
         this.card = card;
     }
+
     
  
     public PropertyCard getCard() {

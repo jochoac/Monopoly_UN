@@ -6,14 +6,13 @@
 package Data;
 
 import java.util.ArrayList;
-import Data.PropertyCard;
 /**
  *
  * @author Juan Ochoa
  */
 public class Board {
     private static Square[][] gameBoard;
-    private ArrayList<PropertyCard> propertys = new ArrayList<>();
+    private ArrayList<PropertyCard> properties = new ArrayList<>();
     private ArrayList<LuckyCard> luckyCards = new ArrayList<>();
     
     public Board() {
@@ -45,56 +44,98 @@ public class Board {
         PropertyCard pasto = new PropertyCard(1023,"Pasto");
         PropertyCard rioHacha = new PropertyCard(567,"Rio Hacha");
         PropertyCard ipiales = new PropertyCard(345,"Ipiales");
+        PropertyCard villavicencio = new PropertyCard(567,"Villavicencio");
+        PropertyCard cocuy = new PropertyCard(820,"El cocuy");
+        PropertyCard buenaventura = new PropertyCard(764,"Buenaventura");
         
         LuckyCard jail = new LuckyCard("Exit to Jail", 0, 0, "Exit to Jail");
         LuckyCard bonus100 = new LuckyCard("Received 100 dollars", 0, 100, "Bonus + $100");
         LuckyCard penalty150 = new LuckyCard("You lose 150 dollars", 150, 0, "Penalty - $150");
-        LuckyCard returnDice = new LuckyCard("Returns to roll the die", 150, 0, "Roll the die");
+        LuckyCard returnDice = new LuckyCard("Returns to roll the dice", 150, 0, "Roll the dice");
         
-        
-        propertys.add(bogota);
-        propertys.add(cartagena);
-        propertys.add(tayrona);
-        propertys.add(medellin);
-        propertys.add(santaMarta);
-        propertys.add(sanAndres);
-        propertys.add(cali);
-        propertys.add(guatape);
-        propertys.add(barranquilla);
-        propertys.add(salento);
-        propertys.add(villaLeyva);
-        propertys.add(taganga);
-        propertys.add(popayan);
-        propertys.add(manizales);
-        propertys.add(sanAgustin);
-        propertys.add(chicamocha);
-        propertys.add(pereira);
-        propertys.add(bucaramanga);
-        propertys.add(sanGil);
-        propertys.add(leticia);
-        propertys.add(armenia);
-        propertys.add(chiquinquira);
-        propertys.add(zipaquira);
-        propertys.add(barichara);
-        propertys.add(losNevados);
-        propertys.add(pasto);
-        propertys.add(rioHacha);
-        propertys.add(sanGil);
-        propertys.add(ipiales);
+        properties.add(bogota);
+        properties.add(cartagena);
+        properties.add(tayrona);
+        properties.add(medellin);
+        properties.add(santaMarta);
+        properties.add(sanAndres);
+        properties.add(cali);
+        properties.add(guatape);
+        properties.add(barranquilla);
+        properties.add(salento);
+        properties.add(villaLeyva);
+        properties.add(taganga);
+        properties.add(popayan);
+        properties.add(manizales);
+        properties.add(sanAgustin);
+        properties.add(chicamocha);
+        properties.add(pereira);
+        properties.add(bucaramanga);
+        properties.add(sanGil);
+        properties.add(leticia);
+        properties.add(armenia);
+        properties.add(chiquinquira);
+        properties.add(zipaquira);
+        properties.add(barichara);
+        properties.add(losNevados);
+        properties.add(pasto);
+        properties.add(rioHacha);
+        properties.add(sanGil);
+        properties.add(ipiales);
+        properties.add(villavicencio);
+        properties.add(cocuy);
+        properties.add(buenaventura);
         
         luckyCards.add(jail);
         luckyCards.add(bonus100);
         luckyCards.add(penalty150);
         
-        
-        
-        //probar push
         int value = 0;
         gameBoard = new Square[11][11];
         for (int row = 0; row < gameBoard.length; row++) {
-            for (int col = 0; col < gameBoard.length; col++) {
-                PropertySquare square = new PropertySquare(row, col, "");
-                gameBoard[row][col] = square;
+            for (int col = 0; col < gameBoard.length; col++) 
+            {
+                if((row==0&&col==5)||(row==5&&col==10)||(row==5&&col==0)||(row==10&&col==5))
+                {
+                    Square sqr = new Square(row, col, "Lucky Card");
+                    gameBoard[row][col]= sqr;
+                }
+                else if(row==0&&col==0)
+                {
+                    Square sqr = new Square(row, col, "|   GO   |");
+                    gameBoard[row][col]= sqr;
+                }
+                else if(row==0&&col==10)
+                {
+                    Square sqr = new Square(row, col, "   JAIL  |");
+                    gameBoard[row][col]= sqr;
+                }
+                else if(row==10&&col==0)
+                {
+                    Square sqr = new Square(row, col, "|GO TO JAIL|");
+                    gameBoard[row][col]= sqr;
+                }
+                else if(row==10&&col==10)
+                {
+                    Square sqr = new Square(row, col, "FREE STOP|");
+                    gameBoard[row][col]= sqr;
+                }
+                else if(row==0||row==10)
+                {
+                    PropertyCard card = properties.get(value++);
+                    PropertySquare square = new PropertySquare(card.getCost(), card, row, col, card.getName());
+                    gameBoard[row][col] = square; 
+                }
+                else if(col==0||col==10)
+                {
+                    PropertyCard card = properties.get(value++);
+                    PropertySquare square = new PropertySquare(card.getCost(), card, row, col, card.getName());
+                    gameBoard[row][col] = square; 
+                }
+                else
+                {
+                    
+                }
             }
         }
     }
