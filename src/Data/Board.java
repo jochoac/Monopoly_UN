@@ -76,7 +76,7 @@ public class Board {
         cards.add(sanGil);
         cards.add(ipiales);
         
-        
+        //probar push
         int value = 0;
         gameBoard = new Square[11][11];
         for (int row = 0; row < gameBoard.length; row++) {
