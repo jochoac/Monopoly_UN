@@ -13,7 +13,8 @@ import Data.PropertyCard;
  */
 public class Board {
     private static Square[][] gameBoard;
-    private ArrayList<PropertyCard> cards = new ArrayList<>();
+    private ArrayList<PropertyCard> propertys = new ArrayList<>();
+    private ArrayList<LuckyCard> luckyCards = new ArrayList<>();
     
     public Board() {
         PropertyCard bogota = new PropertyCard(3500,"Bogotá");
@@ -46,35 +47,35 @@ public class Board {
         PropertyCard ipiales = new PropertyCard(345,"Ipiales");
         
         
-        cards.add(bogota);
-        cards.add(cartagena);
-        cards.add(tayrona);
-        cards.add(medellin);
-        cards.add(santaMarta);
-        cards.add(sanAndres);
-        cards.add(cali);
-        cards.add(guatape);
-        cards.add(barranquilla);
-        cards.add(salento);
-        cards.add(villaLeyva);
-        cards.add(taganga);
-        cards.add(popayan);
-        cards.add(manizales);
-        cards.add(sanAgustin);
-        cards.add(chicamocha);
-        cards.add(pereira);
-        cards.add(bucaramanga);
-        cards.add(sanGil);
-        cards.add(leticia);
-        cards.add(armenia);
-        cards.add(chiquinquira);
-        cards.add(zipaquira);
-        cards.add(barichara);
-        cards.add(losNevados);
-        cards.add(pasto);
-        cards.add(rioHacha);
-        cards.add(sanGil);
-        cards.add(ipiales);
+        propertys.add(bogota);
+        propertys.add(cartagena);
+        propertys.add(tayrona);
+        propertys.add(medellin);
+        propertys.add(santaMarta);
+        propertys.add(sanAndres);
+        propertys.add(cali);
+        propertys.add(guatape);
+        propertys.add(barranquilla);
+        propertys.add(salento);
+        propertys.add(villaLeyva);
+        propertys.add(taganga);
+        propertys.add(popayan);
+        propertys.add(manizales);
+        propertys.add(sanAgustin);
+        propertys.add(chicamocha);
+        propertys.add(pereira);
+        propertys.add(bucaramanga);
+        propertys.add(sanGil);
+        propertys.add(leticia);
+        propertys.add(armenia);
+        propertys.add(chiquinquira);
+        propertys.add(zipaquira);
+        propertys.add(barichara);
+        propertys.add(losNevados);
+        propertys.add(pasto);
+        propertys.add(rioHacha);
+        propertys.add(sanGil);
+        propertys.add(ipiales);
         
         //probar push
         int value = 0;

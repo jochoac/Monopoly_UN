@@ -14,8 +14,11 @@ public class LuckyCard extends Card{
     private String penalty;
     private String bonus;
 
-    public LuckyCard(String name) {
+    public LuckyCard(String description, String penalty, String bonus, String name) {
         super(name);
+        this.description = description;
+        this.penalty = penalty;
+        this.bonus = bonus;
     }
 
     public String getDescription() {
